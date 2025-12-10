@@ -1,0 +1,274 @@
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* slight upward motion */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0; /* start hidden */
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Base reset helpers */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #B8E2BA;
+  font-family: "Trebuchet MS", "Segoe UI", Tahoma, sans-serif;
+  font-size: 12pt; 
+  color: #fff;
+
+  background-color: #B8E2BA; /* fallback */
+  background-image: url("../images/background.jpg");
+  background-repeat: repeat;        /* tile the image */
+  background-size: 200px 200px;     /* shrink each tile to 200×200px */
+  background-position: top left;    /* align edges */
+}
+
+/* Typography */
+h1, h2, h3 {
+  margin: 0 0 0.5em 0;
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  text-align: center;
+}
+
+/*footer */
+footer {
+  background: #0F3017;
+  color: #fff;
+  text-align: center;
+  height: 50px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Centered dropdown nav */
+nav {
+  position: relative;
+  display: flex;
+  justify-content: center; /* center horizontally */
+  margin: 20px 0;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+nav .menu-toggle {
+  background: #0F3017;
+  color: #fff;
+  border: none;
+  padding: 20px 40px;
+  cursor: pointer;
+  font-size: 18pt;
+  border-radius: 8px;
+  height: 100px;
+}
+
+nav .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  position: absolute;
+  right: 0;                        /* attach to the right edge */
+  margin-right: 20px;
+  background: #0F3017;
+  border-radius: 8px;
+  min-width: 200px;                /* fixed width for dropdown */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+nav.active .menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);        /* smooth slide down */
+}
+
+nav .menu li {
+  border-bottom: 1px solid #2E9648;
+}
+
+nav .menu li:last-child {
+  border-bottom: none;
+}
+
+nav .menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav .menu li a:hover {
+  background: #2E9648;
+}
+
+/* Intro page special layout */
+.intro-layout {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.intro-main {
+  flex: 0 0 50%; /* fixed to half width */
+  margin-left: 30px;
+  margin-right: 20px; /* spacing from images */
+  padding: 20px;
+  background: linear-gradient(180deg, #2E9648 0%, #0F3017 100%);
+  color: #fff;
+  border-radius: 12px;
+}
+
+.intro-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* space between the two images */
+  margin-right: 0; /* butt against right edge */
+}
+
+.intro-images img {
+  max-width: 450px; /* keep them uniform */
+  height: auto;
+  border-radius: 12px;
+  align-self: flex-end; /* push to right edge */
+}
+
+/* INTRO page main */
+.intro-main {
+  width: 70%;
+  margin: 30px auto;
+  padding: 20px;
+  background: linear-gradient(180deg, #2E9648 0%, #0F3017 100%);
+  color: #fff;
+  border-radius: 12px;
+}
+
+/* Shared container styles */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* uniform spacing between containers */
+  margin: 30px 0;
+}
+
+article {
+  background: #2E9648;
+  border-radius: 12px;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* default shadow */
+}
+
+article:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #2E9648, 0 8px 20px rgba(0,0,0,0.5); /* glow + deeper shadow */
+}
+
+/* Content inside containers */
+article figure {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article figure img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+article figure img:hover {
+  transform: scale(1.1); /* zoom effect */
+}
+
+article h2 {
+  text-align: center;
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+
+article p {
+  margin: 0 0 1em 0;
+  padding: 0 10px;
+  text-align: left;
+}
+
+/* ANIMATION page container and table */
+.animation-wrap {
+  width: calc(100% - 100px);
+  background: #0F3017;
+  min-height: 50vh;
+  margin: 70px auto;
+  padding: 20px;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.animation-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.animation-wrap th,
+.animation-wrap td {
+  padding: 10px;
+  color: #fff;
+}
+
+.animation-wrap thead th {
+  font-weight: bold;
+  text-align: center;
+}
+
+.animation-wrap tbody td {
+  text-align: center;
+}
+
+.animation-wrap tfoot td {
+  text-align: center; 
+}
+
+
+.animation-wrap img {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: contain; /* keeps images inside cells */
+  padding: 15px;
+  border-radius: 8px;
+}

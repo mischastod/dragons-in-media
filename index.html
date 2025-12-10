@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dragons In Media — Intro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Normalize (latest stable) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <!-- Google Font: Lobster -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="fade-in">
+    <nav aria-label="Main">
+      <button class="menu-toggle">Navigation</button>
+  <ul class="menu">
+    <li><a href="index.html">INTRO</a></li>
+    <li><a href="videogames.html">VIDEO GAMES</a></li>
+    <li><a href="books.html">BOOKS</a></li>
+    <li><a href="animation.html">ANIMATION</a></li>
+  </ul>
+    </nav>
+  </header>
+
+   <div class="intro-layout">
+  <main class="intro-main fade-in">
+    <h1>Dragons In Media</h1>
+    <section aria-labelledby="intro-content">
+      <p>
+        Dragons are monsters and enemies common in myths and folktales. They're presence in literature dates back hundreds of years; their presence in folklore, perhaps thousands. As such, dragons are commonly featured in more modern literature and art. Modern pop-culture has all kinds of dragons that show different sides to our understanding of the folklore. This website is a small selection of some dragons in modern pop-culture to observe!
+      </p>
+      <p>
+        I've always been a huge fan of dragons, and I thought it would be fun to compile a list of some of my and my friends' favorites. I decided the most natural way to organize them would be by media type-- dragons who appear in video games, books, or animation. I also tried to limit the selection to just one dragon per piece of art or franchise. For the record, my favorite dragon on this list is Bahamut.
+      </p>
+      <p>
+        Something I found interesting was comparing when dragons were enemies and when they were allies. The difference in presentation between the two is stark. Toothless and Charizard have very little in common with Lichdragon Fortissax and Darkeater Midir. Which is even shown in their names, lol. There's also the difference in medium-- dragons in animation tend to be allies, whereas dragons in video games are almost always enemies. Books offer a more nuanced middleground.
+      </p>
+      <p>
+        Enjoy this brief look into dragons as an archetype in fiction!
+      </p>
+    </section>
+  </main>
+
+  <aside class="intro-images fade-in">
+    <img src="assets/images/dragonside.png" alt="Dragon standing at the side">
+    <img src="assets/images/dragonflying.png" alt="Dragon flying in the sky">
+  </aside>
+</div>
+
+  </main>
+
+  <footer class="fade-in">
+    <p>Mischa S web design final 2025</p>
+  </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const nav = document.querySelector("nav");
+    const toggle = nav.querySelector(".menu-toggle");
+    toggle.addEventListener("click", function() {
+      nav.classList.toggle("active");
+    });
+  });
+</script>
+</body>
+</html>

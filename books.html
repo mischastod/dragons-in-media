@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dragons In Media — Books</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Normalize (latest stable) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <!-- Google Font: Lobster -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="fade-in">
+    <nav aria-label="Main">
+      <button class="menu-toggle">Navigation</button>
+  <ul class="menu">
+    <li><a href="index.html">INTRO</a></li>
+    <li><a href="videogames.html">VIDEO GAMES</a></li>
+    <li><a href="books.html">BOOKS</a></li>
+    <li><a href="animation.html">ANIMATION</a></li>
+  </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Pair 1: Smaug & Ramoth -->
+    <section>
+      <article class="fade-in">
+        <figure>
+          <img src="assets/images/smaug.jpg" alt="Smaug as depicted in The Hobbit">
+        </figure>
+        <h2>Smaug</h2>
+        <p>The Hobbit, J.R.R. Tolkien</p>
+      </article>
+
+      <article class="fade-in">
+        <figure>
+          <img src="assets/images/ramoth.jpg" alt="Ramoth from Anne McCaffrey's Dragonflight original cover">
+        </figure>
+        <h2>Ramoth</h2>
+        <p>Dragonflight (original cover), Anne McCaffrey</p>
+      </article>
+    </section>
+
+    <!-- Pair 2: Falkor & Vhagar -->
+    <section>
+      <article class="fade-in">
+        <figure>
+          <img src="assets/images/falkor.jpg" alt="Falkor the Luck Dragon from The Neverending Story">
+        </figure>
+        <h2>Falkor the Luck Dragon</h2>
+        <p>The Neverending Story, Michael Ende -- pictured in the film of the same name.</p>
+      </article>
+
+      <article class="fade-in">
+        <figure>
+          <img src="assets/images/vhagar.jpg" alt="Vhagar from A Song of Ice and Fire, shown in the Game of Thrones TV show">
+        </figure>
+        <h2>Vhagar</h2>
+        <p>A Song of Ice and Fire series, George R.R. Martin -- pictured in the Game of Thrones TV show.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="fade-in">
+    <p>Mischa S web design final 2025</p>
+  </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const nav = document.querySelector("nav");
+    const toggle = nav.querySelector(".menu-toggle");
+    toggle.addEventListener("click", function() {
+      nav.classList.toggle("active");
+    });
+  });
+</script>
+</body>
+</html>

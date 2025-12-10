@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dragons In Media — Animation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Normalize (latest stable) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <!-- Google Font: Lobster -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="fade-in">
+    <nav>
+      <button class="menu-toggle">Navigation</button>
+      <ul class="menu">
+        <li><a href="index.html">INTRO</a></li>
+        <li><a href="videogames.html">VIDEO GAMES</a></li>
+        <li><a href="books.html">BOOKS</a></li>
+        <li><a href="animation.html">ANIMATION</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Pair 1: Charizard & Toothless -->
+    <section>
+      <article class="fade-in">
+        <figure>
+          <img src="assets/images/charizard.jpg" alt="Charizard from Pokémon">
+        </figure>
+        <h2>Charizard</h2>
+        <p>Pokémon</p>
+      </article>
+
+      <article class="fade-in">
+        <figure>
+          <img src="assets/images/toothless.jpg" alt="Toothless from How To Train Your Dragon">
+        </figure>
+        <h2>Toothless</h2>
+        <p>How To Train Your Dragon</p>
+      </article>
+    </section>
+
+    <!-- Single: Shenron -->
+    <section>
+      <article class="fade-in">
+        <figure>
+          <img src="assets/images/shenron.jpg" alt="Shenron from Dragon Ball">
+        </figure>
+        <h2>Shenron</h2>
+        <p>Dragon Ball</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Mischa S web design final 2025</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const nav = document.querySelector("nav");
+      const toggle = nav.querySelector(".menu-toggle");
+      toggle.addEventListener("click", function() {
+        nav.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>
